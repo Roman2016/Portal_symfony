@@ -1,0 +1,20 @@
+portal_image:
+    resource: "@PortalBundle/Resources/config/routing/images.yml"
+    prefix:   /image
+
+portal_comment:
+    resource: "@PortalBundle/Resources/config/routing/comments.yml"
+    prefix:   /comment
+
+portal_article:
+    resource: "@PortalBundle/Resources/config/routing/articles.yml"
+    prefix:   /article
+
+portal_user:
+    resource: "@PortalBundle/Resources/config/routing/users.yml"
+    prefix:   /user
+
+portal_homepage:
+    path:     /
+    defaults: { _controller: PortalBundle:Default:index }
+    methods:  [GET, POST]

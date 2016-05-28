@@ -1,0 +1,45 @@
+PortalBundle\Entity\Articles:
+    type: entity
+    table: articles
+    indexes:
+        fk_user_article:
+            columns:
+                - article_user_id
+    id:
+        articleId:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: article_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        articleTitle:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            column: article_title
+        articleText:
+            type: text
+            nullable: false
+            length: 65535
+            fixed: false
+            column: article_text
+        articleAddDate:
+            type: datetime
+            nullable: false
+            default: CURRENT_TIMESTAMP
+            column: article_add_date
+    manyToOne:
+        articleUser:
+            targetEntity: Users
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                article_user_id:
+                    referencedColumnName: user_id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

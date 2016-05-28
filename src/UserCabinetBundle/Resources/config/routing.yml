@@ -1,0 +1,3 @@
+user_cabinet_homepage:
+    path:     /
+    defaults: { _controller: UserCabinetBundle:Default:index }

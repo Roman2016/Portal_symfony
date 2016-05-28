@@ -1,0 +1,48 @@
+PortalBundle\Entity\Users:
+    type: entity
+    table: users
+    uniqueConstraints:
+        user_name_UNIQUE:
+            columns:
+                - user_name
+        user_email_UNIQUE:
+            columns:
+                - user_email
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: user_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        userName:
+            type: string
+            nullable: false
+            length: 25
+            fixed: false
+            column: user_name
+        userPassword:
+            type: string
+            nullable: false
+            length: 25
+            fixed: false
+            column: user_password
+        userRegistrationDate:
+            type: date
+            nullable: false
+            column: user_registration_date
+        userLastVisitDate:
+            type: datetime
+            nullable: false
+            default: CURRENT_TIMESTAMP
+            column: user_last_visit_date
+        userEmail:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            column: user_email
+    lifecycleCallbacks: {  }

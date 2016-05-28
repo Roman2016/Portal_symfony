@@ -1,0 +1,8 @@
+user_cabinet:
+    resource: "@UserCabinetBundle/Resources/config/routing.yml"
+    prefix:   /cabinet
+
+portal:
+    resource: "@PortalBundle/Resources/config/routing.yml"
+    prefix:   /
+

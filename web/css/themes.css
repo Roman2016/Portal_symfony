@@ -1,0 +1,85 @@
+#search_form{
+    margin-top: 70px /* отступ от верхней границы*/
+}
+
+p {
+    font-size: 15px; /* Размер шрифта в пунктах */
+    margin-top: 2px;
+}
+
+p.content {
+    font-size: 15px; /* Размер шрифта в пунктах */
+    margin-top: 2px;
+    /*background: #FFFFFF;*/
+}
+
+code {
+    font-size: 15px; /* Размер шрифта */
+}
+
+.img-circle{
+    width: 100px;
+    height: 100px;
+}
+
+div .container{
+    background: #F5F5F5 repeat-y;
+    /*margin-left: 150px;  отступы для рабочей области контейнера
+    margin-right: 150px;*/
+}
+
+.portal{
+    background: url(/images/fon.jpg) repeat-y;
+}
+
+.badge{
+    font-size: 20px;
+}
+
+.content_border{
+
+    height: 4px;
+    color: darkblue;
+}
+
+/*margin-top - отступ сверху
+margin-right - отступ справа
+margin-bottom - отступ снизу
+margin-left - отступ слева*/
+
+div.border{
+    width: 100%;
+    height: 2px;
+    background: green;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+nav.navbar{
+    background-color: beige;
+}
+
+body {
+    padding-top: 50px;
+    /*padding-bottom: 10px;*/
+}
+
+.footer{
+    /*background: url(/images/fon.jpg) repeat-y;*/
+    padding-top: 70px;
+}
+
+.footer_main{
+    background-color: #101010;
+}
+
+#facebook{
+    margin-top: 30px;
+}
+
+.size_class {
+    width: 75px;
+    position: absolute;
+    /*z-index: 50;*/
+    left: -25px;
+}

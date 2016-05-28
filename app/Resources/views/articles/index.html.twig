@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Articles list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Articleid</th>
+                <th>Articletitle</th>
+                <th>Articletext</th>
+                <th>Articleadddate</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <td><a href="{{ path('article_show', { 'id': article.articleId }) }}">{{ article.articleId }}</a></td>
+                <td>{{ article.articleTitle }}</td>
+                <td>{{ article.articleText }}</td>
+                <td>{% if article.articleAddDate %}{{ article.articleAddDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('article_show', { 'id': article.articleId }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('article_edit', { 'id': article.articleId }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('article_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
